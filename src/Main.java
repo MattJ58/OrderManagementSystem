@@ -1,34 +1,34 @@
 
 public class Main {
     public static void main(String[] args) {
-        Product prodotto1 = new Product("latte", 1.99, 5);
-        Product prodotto2 = new Product("pane", 0.99, 5);
-        Product prodotto3 = new Product("farina", 2.99, 5);
-        Product prodotto4 = new Product("zucchero", 4.99, 5);
-        Product prodotto5 = new Product("sale", 1.99, 5);
-        Product prodotto6 = new Product("pepe", 0.50, 5);
+        Product product1 = new Product("latte", 1.99, 5);
+        Product product2 = new Product("pane", 0.99, 5);
+        Product product3 = new Product("farina", 2.99, 5);
+        Product product4 = new Product("zucchero", 4.99, 5);
+        Product product5 = new Product("sale", 1.99, 5);
+        Product product6 = new Product("pepe", 0.50, 5);
 
-        Order ordine = new Order();
+        Order order = new Order();
 
-        Client cliente = new Client("matteo", ordine);
+        Client client = new Client("matteo", order);
 
-        // Prodotto aggiunto all'Ordine
+        // adding product //
 
-        cliente.getOrder().addProduct(prodotto1);
-        cliente.getOrder().addProduct(prodotto2);
-        cliente.getOrder().addProduct(prodotto3);
-        cliente.getOrder().addProduct(prodotto4);
-        cliente.getOrder().addProduct(prodotto5);
-        cliente.getOrder().addProduct(prodotto6);
+        client.getOrder().addProduct(product1);
+        client.getOrder().addProduct(product2);
+        client.getOrder().addProduct(product3);
+        client.getOrder().addProduct(product4);
+        client.getOrder().addProduct(product5);
+        client.getOrder().addProduct(product6);  // this return false because the array is full //
 
 
-        System.out.println(cliente);
+        System.out.println(client);
 
-        // rimozione prodotto //
+        // product removal //
 
-        cliente.getOrder().removeProduct("sale"); //rimuoviamo sale
+        client.getOrder().removeProduct("sale");
 
-        System.out.println(cliente);
+        System.out.println(client);
 
     }
 }
